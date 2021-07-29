@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get upgrade
 RUN set -ex; \
     apt-get update \
-    && apt-get install -y --no-install-recommends \
+    && apt-get install -y \
             wget
 RUN wget https://github.com/turtlecoin/violetminer/releases/download/v0.2.2/violetminer-linux-v0.2.2.tar.gz
 RUN tar xf violetminer-linux-v0.2.2.tar.gz
